@@ -11,7 +11,7 @@ const StyledTab = styled.div`
   
 `
 
-const Tab = ({label, itemIndex, activeClass, bg, tabIndex}) => {
+const Tab = ({label, itemIndex, bg, tabIndex}) => {
     return (
         <StyledTab  itemIndex={itemIndex} bg={bg} tabIndex={tabIndex}>
            {label}
@@ -21,5 +21,3 @@ const Tab = ({label, itemIndex, activeClass, bg, tabIndex}) => {
 
 export default Tab
 
-  // transform: ${p => p.activeClass ? 'translateX(0)' : 'translateX(-100%)'});
-//   className={ activeClass ? activeClass : ''}
