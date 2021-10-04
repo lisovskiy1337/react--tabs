@@ -1,23 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useState } from 'react'
+import styled, { css } from 'styled-components'
 
-const StyledTab = styled.div`
-    width: 100%;
-    ${(p) => p.tabIndex === p.itemIndex ? 'display: grid' : 'display: none'};
-    place-items: center;
-    height: 100vh;
-    background: ${p => p.bg ? p.bg : '#fff'};
-  
-  
+
+export const StyledTab = styled.div`
+    margin: 0 15px;
+    padding: 10px 0;
+    color: #000; 
+    cursor: pointer;
+    position: relative;
+    transition: 0.35s;    
 `
 
-const Tab = ({label, itemIndex, bg, tabIndex}) => {
+const Tab = ({label, value, bg}) => {
+
+ 
+
     return (
-        <StyledTab  itemIndex={itemIndex} bg={bg} tabIndex={tabIndex}>
-           {label}
-        </StyledTab>
+      <StyledTab className='tut' value={value}  bg={bg} >
+      {label}
+      </ StyledTab>
     )
 }
 
 export default Tab
-
